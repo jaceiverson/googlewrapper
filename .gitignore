@@ -1,0 +1,27 @@
+# virtual environments
+*env*
+
+# PyCharm, VSCode, other caches
+.DS_Store
+.vscode/
+__pycache__/
+.idea/
+
+#credentials
+credentials/
+*.json
+*.dat
+
+# internal stuff
+examples_internal/
+*.txt
+
+# distribution folders
+build/
+dist/
+*.egg-info
+
+# testing
+.mypy_cache/
+.coverage
+.tox
