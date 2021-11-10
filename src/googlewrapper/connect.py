@@ -130,3 +130,13 @@ class Connection:
         """GMAIL Connection Method"""
         scope_list = ["https://mail.google.com/"]
         return build("gmail", "v1", http=self._authenticate(scope_list, "gmail"))
+
+    def drive(self):
+        """Google Drive Connection Method"""
+        scope_list = ['https://www.googleapis.com/auth/drive.readonly']
+        return build("drive","v3",http=self._authenticate(scope_list,"drive"))
+
+    def docs(self):
+        """Google Docs Connection Method"""
+        scope_list = ['https://www.googleapis.com/auth/drive.readonly']
+        return build("docs","v1",http=self._authenticate(scope_list,"docs"))
