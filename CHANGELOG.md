@@ -1,3 +1,6 @@
+### 0.2.6 (2021-11-10)
+- Added Google Docs (read only) wrapper
+
 ### 0.2.5 (2021-10-15)
 
 -  Clarified set_sheet to now be called set_tab to more represent its action
