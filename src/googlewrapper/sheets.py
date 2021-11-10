@@ -79,7 +79,9 @@ class GoogleSheets:
         self.sheet = self.workbook.worksheet("title", tab_name)
 
     # Spreadsheet/Tab Methods
-    def get_df(self, start: str = "a1", index: int = 1, tailing: bool = False) -> DataFrame:
+    def get_df(
+        self, start: str = "a1", index: int = 1, tailing: bool = False
+    ) -> DataFrame:
         """
         gets the contents of the sheet, and returns it as a pd DataFrame
 

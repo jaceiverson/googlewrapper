@@ -39,9 +39,7 @@ class Connection:
         if not Path("./credentials/").is_dir():
             Path("./credentials/").mkdir()
 
-    def _authenticate(
-        self, scope: list, token_name: str, http_return: bool = True
-    ):
+    def _authenticate(self, scope: list, token_name: str, http_return: bool = True):
         """
         Authenticates Google Product using oauth2
         Saves the credentials in the ./credentials folder
@@ -133,10 +131,10 @@ class Connection:
 
     def drive(self):
         """Google Drive Connection Method"""
-        scope_list = ['https://www.googleapis.com/auth/drive.readonly']
-        return build("drive","v3",http=self._authenticate(scope_list,"drive"))
+        scope_list = ["https://www.googleapis.com/auth/drive.readonly"]
+        return build("drive", "v3", http=self._authenticate(scope_list, "drive"))
 
     def docs(self):
         """Google Docs Connection Method"""
-        scope_list = ['https://www.googleapis.com/auth/drive.readonly']
-        return build("docs","v1",http=self._authenticate(scope_list,"docs"))
+        scope_list = ["https://www.googleapis.com/auth/drive.readonly"]
+        return build("docs", "v1", http=self._authenticate(scope_list, "docs"))
