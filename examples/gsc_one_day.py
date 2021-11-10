@@ -1,6 +1,7 @@
 from googlewrapper import GoogleSearchConsole
 
-def get_one_day(sites,d,dims,brand_dict):
+
+def get_one_day(sites, d, dims, brand_dict):
     """
     Pulls one days worth of data for your GSC Property
     d: dt.datetime
