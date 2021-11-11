@@ -27,7 +27,7 @@ class GoogleAnalytics:
 
     def __init__(self, view: str, default_view: str = "df") -> None:
 
-        self.auth = Connection().ga()
+        self.auth = self.__auth()
         self.set_view(view)
         self.make_df = bool(default_view)
 
@@ -44,6 +44,10 @@ class GoogleAnalytics:
         self._s_date: dt.date = dt.date.today() - dt.timedelta(days=8)
         self._e_date: dt.date = dt.date.today() - dt.timedelta(days=1)
         self.raw_data: dict[Any, Any] = {}
+
+    def __auth():
+        """Authenticates to Google"""
+        return Connection().ga()
 
     def set_view(self, view_id: str) -> None:
         """

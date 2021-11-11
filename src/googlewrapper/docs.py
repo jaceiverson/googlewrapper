@@ -5,9 +5,13 @@ from typing import Optional
 class GoogleDocs:
     def __init__(self, doc_id: Optional[str] = None) -> None:
         self.id = doc_id
-        self.connection = Connection().docs()
+        self.connection = self.__auth()
         if doc_id:
             self.doc: dict = self._get_doc()
+
+    def __auth():
+        """Authenticates to Google"""
+        return Connection().docs()
 
     def set_id(self, doc_id: str) -> None:
         """Sets the ID to new ID, calls the API to get the new doc"""

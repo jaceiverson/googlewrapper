@@ -29,7 +29,7 @@ class GoogleSearchConsole:
 
         # Google API Resourse Object created from
         # Connection class in .connect module
-        self.auth = Connection().gsc()
+        self.auth = self.__auth()
 
         # default values for dimensions and date values
         # start date is 7 days ago
@@ -51,6 +51,10 @@ class GoogleSearchConsole:
         self.output: Optional[pd.DataFrame] = None
         # assigned in .ctr()
         self.my_ctr: Optional[pd.DataFrame] = None
+
+    def __auth():
+        """Authenticates to Google"""
+        return Connection().gsc()
 
     def __str__(self) -> str:
         if len(self._site_list) > 1:

@@ -20,11 +20,15 @@ class GoogleBigQuery:
     """
 
     def __init__(self, auth_file_path: str = "gbq-sa.json") -> None:
-        self.auth = Connection().gbq(auth_file_path)
+        self.auth = self.__auth(auth_file_path)
         self._client = bigquery.Client(credentials=self.auth)
         self._project: str = self.auth.project_id
         self._dataset: Optional[str] = None
         self._table: Optional[str] = None
+
+    def __auth(file):
+        """Authenticates to Google"""
+        return Connection().gbq(file)
 
     def set_dataset(self, dataset_name: str) -> None:
         """
