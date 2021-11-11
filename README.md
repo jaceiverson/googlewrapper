@@ -14,10 +14,11 @@ __Current Wrappers Available__
  - <a href=https://github.com/jaceiverson/google-wrapper/blob/master/docs/Google%20Big%20Query.md>Google Big Query</a>
  - <a href=https://github.com/jaceiverson/google-wrapper/blob/master/docs/Pagespeed%20Insights.md>Google PageSpeed API</a>
  - <a href=https://github.com/jaceiverson/google-wrapper/blob/master/docs/Google%20Sheets.md>Google Sheets</a>
+ - <a href=https://github.com/jaceiverson/googlewrapper/blob/master/docs/Google%20Docs.md>Google Docs</a>
 
 _Wrappers In the Pipeline_
- - Google Maps  
- - <a href=https://github.com/jaceiverson/google-wrapper/blob/master/docs/Gmail.md>Gmail</a>
+- <a href=https://github.com/jaceiverson/google-wrapper/blob/master/docs/Gmail.md>Gmail</a>
+- Google Maps  
 
 # STEPS
  1) <a href=https://github.com/jaceiverson/google-wrapper#Acquire-Google-Credentials-from-API-Console>Acquire Google Credentials from API Console</a>
