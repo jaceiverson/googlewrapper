@@ -26,7 +26,7 @@ class GoogleBigQuery:
         self._dataset: Optional[str] = None
         self._table: Optional[str] = None
 
-    def __auth(file):
+    def __auth(self,file):
         """Authenticates to Google"""
         return Connection().gbq(file)
 
