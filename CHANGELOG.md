@@ -1,9 +1,16 @@
+### 0.2.7 (2021-11-12)
+
+- Bug Fix: Resolved known authentiction issue (Issue #2)
+- Added authentication for notebooks (colab, jupyter)
+
 ### 0.2.6 (2021-11-10)
+
 - Added Google Docs (read only) wrapper
 
 ### 0.2.5 (2021-10-15)
 
--  Clarified set_sheet to now be called set_tab to more represent its action
+- Clarified function names in GoogleSheets to more represent its action
+- Methods that refer to tabs, are now properly labeled tab and not sheet
 
 ### 0.2.4 (2021-10-6)
 
