@@ -23,11 +23,15 @@ class GoogleSheets:
 
     def __init__(self, url: Optional[str] = None):
         self.url = url
-        self.auth = Connection().pygsheets()
+        self.auth = self.__auth()
         if self.url is not None:
             self.sheet_id = self.__get_id()
             self.workbook = self.auth.open_by_url(self.url)
             self.sheet = self.workbook.sheet1
+
+    def __auth(self):
+        """Authenticates to Google"""
+        return Connection().pygsheets()
 
     def create_sheet(
         self,

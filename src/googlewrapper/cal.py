@@ -18,7 +18,7 @@ class GoogleCalendar:
 
     def __init__(self, cal_id: Optional[str] = None):
 
-        self.service = Connection().cal()
+        self.service = self.__auth()
 
         # pulls all calendars your authentication has access to
         # saves as self.cal_list
@@ -30,6 +30,10 @@ class GoogleCalendar:
         self.cal_id = cal_id
         if cal_id is None:
             self.set_calendar()
+
+    def __auth(self):
+        """Authenticates to Google"""
+        return Connection().cal()
 
     def __all_calendars(self) -> None:
         """

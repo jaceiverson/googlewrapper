@@ -5,14 +5,20 @@ from typing import Optional
 class GoogleDocs:
     def __init__(self, doc_id: Optional[str] = None) -> None:
         self.id = doc_id
-        self.connection = Connection().docs()
+        # authentication
+        self.connection = self.__auth()
+        # if there is an ID, we will pull the document object
         if doc_id:
-            self.doc: dict = self._get_doc()
+            self.doc = self._get_doc()
+
+    def __auth(self):
+        """Authenticates to Google"""
+        return Connection().docs()
 
     def set_id(self, doc_id: str) -> None:
         """Sets the ID to new ID, calls the API to get the new doc"""
         self.id = doc_id
-        self.doc = self._get_doc()
+        self.doc: dict = self._get_doc()
 
     def _get_doc(self) -> dict:
         """Returns the dictionary object of the Google Doc"""
