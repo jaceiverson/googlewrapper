@@ -56,12 +56,18 @@ class Connection:
         https://developers.google.com/analytics/devguides/
             reporting/core/v4/quickstart/installed-py#3_setup_the_sample
         """
-        # Parse command-line arguments.
+        # Parse command-line arguments
+        # this helps determine if we are in a notebook or not
         parser = argparse.ArgumentParser(
             formatter_class=argparse.RawDescriptionHelpFormatter,
             parents=[tools.argparser],
         )
         flags = parser.parse_args([])
+
+        # if in a notebook, set noauth to True
+        # this allows authentication to work on notebooks
+        if parser.prog == "ipykernel_launcher.py":
+            flags.noauth_local_webserver = True
 
         # Set up a Flow object to be used if we need to authenticate.
         flow = client.flow_from_clientsecrets(

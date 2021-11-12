@@ -9,7 +9,7 @@ class GoogleDocs:
         if doc_id:
             self.doc: dict = self._get_doc()
 
-    def __auth():
+    def __auth(self):
         """Authenticates to Google"""
         return Connection().docs()
 

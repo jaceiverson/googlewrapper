@@ -31,10 +31,10 @@ class GoogleCalendar:
         if cal_id is None:
             self.set_calendar()
 
-    def __auth():
+    def __auth(self):
         """Authenticates to Google"""
         return Connection().cal()
-        
+
     def __all_calendars(self) -> None:
         """
         sets the self.cal_list variable to all the calendars

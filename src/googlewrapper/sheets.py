@@ -29,10 +29,10 @@ class GoogleSheets:
             self.workbook = self.auth.open_by_url(self.url)
             self.sheet = self.workbook.sheet1
 
-    def __auth():
+    def __auth(self):
         """Authenticates to Google"""
         return Connection().pygsheets()
-        
+
     def create_sheet(
         self,
         sheet_title: str,

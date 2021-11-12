@@ -52,7 +52,7 @@ class GoogleSearchConsole:
         # assigned in .ctr()
         self.my_ctr: Optional[pd.DataFrame] = None
 
-    def __auth():
+    def __auth(self):
         """Authenticates to Google"""
         return Connection().gsc()
 

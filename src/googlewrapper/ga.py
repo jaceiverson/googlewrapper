@@ -45,7 +45,7 @@ class GoogleAnalytics:
         self._e_date: dt.date = dt.date.today() - dt.timedelta(days=1)
         self.raw_data: dict[Any, Any] = {}
 
-    def __auth():
+    def __auth(self):
         """Authenticates to Google"""
         return Connection().ga()
 
