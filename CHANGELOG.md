@@ -1,3 +1,7 @@
+### 0.2.8 (2021-12-9)
+
+- Bug Fix: Resolved GSC site_list issue with list like objects
+
 ### 0.2.7 (2021-11-12)
 
 - Bug Fix: Resolved known authentiction issue (Issue #2)
