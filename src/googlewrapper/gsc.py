@@ -4,7 +4,7 @@ import datetime as dt
 import warnings
 from typing import Optional, Any, Type
 import pandas as pd
-from numpy import nan,ndarray
+from numpy import nan, ndarray
 
 # nan is used in the "_check_branded" method
 # probably can be removed, we just need to check
@@ -351,11 +351,13 @@ class GoogleSearchConsole:
 
         this final dictionary of 'gsc_analytics_data' is returned.
         """
-        # check to make sure self._site_list is 
+        # check to make sure self._site_list is
         # 1. Not a string -> if it is make it a one element list
         # 2. Declared and a list (or list like) -> Throws TypeError if not
-        if isinstance(self._site_list,str):
-            warnings.warn("Please make sure your site list is list like. We consider strings as URL, and will be converted to a one element list")
+        if isinstance(self._site_list, str):
+            warnings.warn(
+                "Please make sure your site list is list like. We consider strings as URL, and will be converted to a one element list"
+            )
             self._site_list = [self._site_list]
         try:
             self._site_list = list(self._site_list)
