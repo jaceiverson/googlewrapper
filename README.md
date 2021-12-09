@@ -34,7 +34,26 @@ After you have your project set up, oAuth configured, and the optional service a
 Make sure to download your oAuth credentials and save them to your working directory as 'client_secret.json'.
 
 ## Installation
-It is recommended to create a virtualenv using the <a href="https://pypi.org/project/virtualenv/" target="_blank">virtualenv library</a>. Once created, I recommend installing googlewrapper with the following command:
+### Create virtual enviornment
+I recommended to create a virtualenv using the <a href="https://pypi.org/project/virtualenv/" target="_blank">virtualenv library</a>. Follow these steps:
+
+#### install the package to main python instance
+```
+pip3 install virtualenv
+```
+#### actually create the virtual enviornment
+```
+python3 -m virtualenv venv
+```
+#### activate the enviornment
+```
+source venv/bin/activate
+```
+#### install all the necessary packages
+```
+pip install requirements.txt -r
+```
+Now we can install the module:
 ```
 pip install googlewrapper
 ```
