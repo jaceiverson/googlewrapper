@@ -6,3 +6,5 @@ pygsheets==2.0.5
 # For Google Big Query
 google-cloud-bigquery==2.16.1
 pandas-gbq==0.15.0
+# For Reports
+pdcompare==0.1.5

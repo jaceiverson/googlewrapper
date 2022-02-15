@@ -335,8 +335,9 @@ class GSCReport:
         self.compare_df["pct"] = self.compare_df["change"] / self.compare_df["from"]
         # self.compare_df.index.name = self.dim_proper
 
-        # send to Google Sheet
-        self._send("Comparison", self.compare_df)
+        if self.out_sheet is not None:
+            # send to Google Sheet
+            self._send("Comparison", self.compare_df)
 
     def highs_and_lows(
         self, percent_sort: bool = False, filter_zero_values: bool = True
