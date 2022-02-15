@@ -1,3 +1,9 @@
+### 0.2.9 (2022-2-15)
+
+- New Feature: Reports Module
+    - You can now run weekly/monthly reports using GSC/GA data
+- Bug Fix: GoogleDocs.combine_content() now correctly joins highlighted/other formated text together
+
 ### 0.2.8 (2021-12-9)
 
 - Bug Fix: Resolved GSC site_list issue with list like objects
