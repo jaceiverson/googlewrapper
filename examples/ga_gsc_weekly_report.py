@@ -3,6 +3,7 @@
 import datetime as dt
 from googlewrapper.reports import WeeklyReport
 
+
 def monday_report_template(
     week_start=dt.date.today() - dt.timedelta(days=8),
     week_end=dt.date.today() - dt.timedelta(days=2),

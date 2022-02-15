@@ -81,6 +81,6 @@ class GoogleDocs:
             [
                 element["textRun"]["content"]
                 for element in content["paragraph"]["elements"]
-                if "pageBreak" not in element.keys() and 'textRun' in element.keys()
+                if "pageBreak" not in element.keys() and "textRun" in element.keys()
             ]
         ).strip()

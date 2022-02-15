@@ -1,6 +1,7 @@
 """Create a report comparing 2 periods in GSC"""
 from googlewrapper.reports import GSCReport
 
+
 def example():
     # YOUR SITE HERE
     site = "example.com"
