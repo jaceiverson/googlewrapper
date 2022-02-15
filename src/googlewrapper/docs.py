@@ -11,6 +11,14 @@ class GoogleDocs:
         if doc_id:
             self.doc = self._get_doc()
 
+    def __str__(self):
+        if self.doc:
+            return self.get_title()
+        return self
+
+    def __repr__(self):
+        return self.__str__()
+
     def __auth(self):
         """Authenticates to Google"""
         return Connection().docs()
@@ -71,8 +79,8 @@ class GoogleDocs:
         """
         return "".join(
             [
-                element["textRun"]["content"].strip()
+                element["textRun"]["content"]
                 for element in content["paragraph"]["elements"]
-                if "pageBreak" not in element.keys()
+                if "pageBreak" not in element.keys() and 'textRun' in element.keys()
             ]
-        )
+        ).strip()
