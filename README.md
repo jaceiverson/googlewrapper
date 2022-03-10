@@ -49,10 +49,6 @@ python3 -m virtualenv venv
 ```
 source venv/bin/activate
 ```
-#### install all the necessary packages
-```
-pip install requirements.txt -r
-```
 Now we can install the module:
 ```
 pip install googlewrapper
@@ -61,6 +57,12 @@ OR
 ```
 python -m pip install googlewrapper
 ```
+#### general use for virtual environments
+It is recommended to use virtualenvs when working with python and storing all your dependencies in a `requirements.txt` file. When you do that, you can simply install all the necessary packages by running the command
+```
+pip install requirements.txt -r
+```
+This will attempt to install everything in that text file. Normally packages will include dependency installs automatically. For example, when you run `pip install googlewrapper` all the dependencies (and unfortuneately there are quite a few) will automatically be installed. 
 
 ## Combining Products Examples
 ### Example 1
