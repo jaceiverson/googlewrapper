@@ -8,22 +8,22 @@ General Connector Classes for Google Products
 
 __Current Wrappers Available__
 
- - <a href=https://github.com/jaceiverson/googlewrapper/blob/master/docs/Google%20Analytics.md>Google Analytics</a>
- - <a href=https://github.com/jaceiverson/googlewrapper/blob/master/docs/Google%20Search%20Console.md>Google Search Console</a>
- - <a href=https://github.com/jaceiverson/googlewrapper/blob/master/docs/Google%20Calendar.md>Google Calendar</a>
- - <a href=https://github.com/jaceiverson/googlewrapper/blob/master/docs/Google%20Big%20Query.md>Google Big Query</a>
- - <a href=https://github.com/jaceiverson/googlewrapper/blob/master/docs/Pagespeed%20Insights.md>Google PageSpeed API</a>
- - <a href=https://github.com/jaceiverson/googlewrapper/blob/master/docs/Google%20Sheets.md>Google Sheets</a>
- - <a href=https://github.com/jaceiverson/googlewrapper/blob/master/docs/Google%20Docs.md>Google Docs</a>
+ - <a href=https://github.com/jaceiverson/googlewrapper/blob/master/documentation/Google%20Analytics.md>Google Analytics</a>
+ - <a href=https://github.com/jaceiverson/googlewrapper/blob/master/documentation/Google%20Search%20Console.md>Google Search Console</a>
+ - <a href=https://github.com/jaceiverson/googlewrapper/blob/master/documentation/Google%20Calendar.md>Google Calendar</a>
+ - <a href=https://github.com/jaceiverson/googlewrapper/blob/master/documentation/Google%20Big%20Query.md>Google Big Query</a>
+ - <a href=https://github.com/jaceiverson/googlewrapper/blob/master/documentation/Pagespeed%20Insights.md>Google PageSpeed API</a>
+ - <a href=https://github.com/jaceiverson/googlewrapper/blob/master/documentation/Google%20Sheets.md>Google Sheets</a>
+ - <a href=https://github.com/jaceiverson/googlewrapper/blob/master/documentation/Google%20Docs.md>Google Docs</a>
 
 _Wrappers In the Pipeline_
-- <a href=https://github.com/jaceiverson/googlewrapper/blob/master/docs/Gmail.md>Gmail</a>
+- <a href=https://github.com/jaceiverson/googlewrapper/blob/master/documentation/Gmail.md>Gmail</a>
 - Google Maps  
 
 # STEPS
  1) <a href=https://github.com/jaceiverson/googlewrapper#Acquire-Google-Credentials-from-API-Console>Acquire Google Credentials from API Console</a>
  2) <a href=https://github.com/jaceiverson/googlewrapper#installation>Install this package</a>
- 3) <a href=https://github.com/jaceiverson/googlewrapper/blob/master/docs/Google%20Authentication.md>Create Connection in Python</a>
+ 3) <a href=https://github.com/jaceiverson/googlewrapper/blob/master/documentation/Google%20Authentication.md>Create Connection in Python</a>
  4) Use product wrapper to make API calls (see links to individual docs above)
 
 ## Acquire Google Credentials from API Console
