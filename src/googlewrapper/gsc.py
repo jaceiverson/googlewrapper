@@ -2,7 +2,7 @@
 
 import datetime as dt
 import warnings
-from typing import Optional, Any, Type
+from typing import Optional, Any, Union
 import pandas as pd
 from numpy import nan, ndarray
 
@@ -334,7 +334,7 @@ class GoogleSearchConsole:
             return False
         return pd.Series(query_list).str.contains("|".join(branded_list), na=False)
 
-    def get_data(self) -> dict[Any, Any]:
+    def get_data(self) -> Union[dict[Any, Any], pd.DataFrame]:
         """
         Main method to access data.
         Loops through the self._site_list
@@ -389,6 +389,11 @@ class GoogleSearchConsole:
         # this could be large, could have memory issues, need to
         # look into this
         self.output = gsc_analytics_data
+
+        # if we only have one site we are pulling for, we can just return the
+        # df, no need to have it sent as a dictionary
+        if len(gsc_analytics_data.keys()) == 1:
+            return temp_df
 
         return gsc_analytics_data
 
