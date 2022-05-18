@@ -123,7 +123,7 @@ Parameters
 - After assigning all the parameters - with the other class methods - run this method to make the api request
 - This method does not accept any parameters
 
- **Returns**: dictionary object
+ **Returns**: dictionary object | pd.DataFrame (if len(self._site_list)==1)
    - Keys: Site URLs from the site_list
    - Values: pd.DataFrame of GSC data 
    - This dictionary object is also saved as the ```self.output``` attribute to use with ```self.ctr()```

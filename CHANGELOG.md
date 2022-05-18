@@ -1,3 +1,6 @@
+### 0.2.10 (2022-5-18)
+- Changed GSC for 1 site responses to return only a pd.DataFrame instead of a dictionary housing a DataFrame
+
 ### 0.2.9 (2022-2-15)
 
 - New Feature: Reports Module
