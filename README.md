@@ -34,22 +34,6 @@ After you have your project set up, oAuth configured, and the optional service a
 Make sure to download your oAuth credentials and save them to your working directory as 'client_secret.json'.
 
 ## Installation
-### Create virtual enviornment
-I recommended to create a virtualenv using the <a href="https://pypi.org/project/virtualenv/" target="_blank">virtualenv library</a>. Follow these steps:
-
-#### install the package to main python instance
-```
-pip3 install virtualenv
-```
-#### actually create the virtual enviornment
-```
-python3 -m virtualenv venv
-```
-#### activate the enviornment
-```
-source venv/bin/activate
-```
-Now we can install the module:
 ```
 pip install googlewrapper
 ```
@@ -57,12 +41,9 @@ OR
 ```
 python -m pip install googlewrapper
 ```
-#### general use for virtual environments
-It is recommended to use virtualenvs when working with python and storing all your dependencies in a `requirements.txt` file. When you do that, you can simply install all the necessary packages by running the command
-```
-pip install requirements.txt -r
-```
-This will attempt to install everything in that text file. Normally packages will include dependency installs automatically. For example, when you run `pip install googlewrapper` all the dependencies (and unfortuneately there are quite a few) will automatically be installed. 
+
+### Virtual Environment
+For each project it is reccomended to create a virtualenv. Here is a <a href=https://github.com/jaceiverson/googlewrapper/blob/master/documentation/VirtualEnv.md>simple guide</a> on virtual environments.
 
 ## Combining Products Examples
 ### Example 1
@@ -118,6 +99,9 @@ for site in gsc_data:
   # send the data to GBQ
   gbq.send(gsc_data[site])
 ```
+
+## Pull Requests/Suggestions
+I'd love to hear your feedback and suggestions. If you see something and you want to give it a shot and fix it, feel free to clone and make a pull request. OR you can submit and issue/feature request on GitHub. 
 
 ## Thanks for using my code
 <p align="center">
