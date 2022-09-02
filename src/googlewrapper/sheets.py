@@ -2,6 +2,7 @@
 
 from typing import Optional, Any
 from pandas import DataFrame, Series
+import re
 
 from .connect import Connection
 
@@ -45,9 +46,12 @@ class GoogleSheets:
         self.workbook = self.auth.create(
             sheet_title, folder=folder_id, template=template_id
         )
+        # assign self.sheet to the newly created sheet
         self.sheet = self.workbook.sheet1
-        return self.workbook.id
-        # self.set_sheet('Sheet1')
+        # declare the URL of the newly created sheet
+        self.url = f"https://docs.google.com/spreadsheets/d/{self.workbook.id}"
+        # return the URL
+        return self.url
 
     def delete_sheet(self, file_id: str):
         """
@@ -73,7 +77,10 @@ class GoogleSheets:
         extracts the sheet id from the passed in URL
         """
         if self.url is not None:
-            return self.url.split("d/")[1].split("/edit")[0]
+            p=r".+\/d\/([^\/]+)"
+            if match := re.match(p, self.url):
+                return match.groups()[0]
+
         return None
 
     def set_tab(self, tab_name: str) -> None:

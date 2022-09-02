@@ -1,10 +1,16 @@
+### 0.2.11 (COMING)
+
+- GoogleSheets.create_sheet() will now return the entire URL instead of the only the ID
+- Updated dependencies
+
 ### 0.2.10 (2022-5-18)
+
 - Changed GSC for 1 site responses to return only a pd.DataFrame instead of a dictionary housing a DataFrame
 
 ### 0.2.9 (2022-2-15)
 
 - New Feature: Reports Module
-    - You can now run weekly/monthly reports using GSC/GA data
+  - You can now run weekly/monthly reports using GSC/GA data
 - Bug Fix: GoogleDocs.combine_content() now correctly joins highlighted/other formated text together
 
 ### 0.2.8 (2021-12-9)
@@ -27,7 +33,7 @@
 
 ### 0.2.4 (2021-10-6)
 
-- Bug Fix: GA._create_df() fixed column renaming issue
+- Bug Fix: GA.\_create_df() fixed column renaming issue
 
 ### 0.2.3 (2021-10-4)
 

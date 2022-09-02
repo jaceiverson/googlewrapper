@@ -30,11 +30,11 @@ class TestUserHandling:
         assert sheet.folder_id
 
     def test_sheet_creation(self, sheet):
-        sheet.file_id = sheet.s.create_sheet(
+        sheet.my_url = sheet.s.create_sheet(
             "PYTEST CREATION TEST", folder_id=sheet.folder_id
         )
-        sheet.my_url = f"https://docs.google.com/spreadsheets/d/{sheet.file_id}"
-        assert sheet.file_id
+        sheet.file_id = sheet.s.workbook.id
+        assert sheet.my_url
 
     def test_init_with_url(self, sheet):
         s_url = GoogleSheets(sheet.my_url)
@@ -84,7 +84,7 @@ class TestUserHandling:
         assert sheet.s.share(["iverson.jace@gmail.com"], "reader") is None
 
     def test_deletion(self, sheet):
-        deleted_id = sheet.s.delete_sheet(sheet.file_id)
+        deleted_id = sheet.s.delete_sheet(sheet.s.workbook.id)
         assert deleted_id == sheet.file_id
         deleted_folder_id = sheet.s.auth.drive.delete(sheet.folder_id)
         assert deleted_folder_id is None
