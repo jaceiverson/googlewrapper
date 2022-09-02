@@ -1,6 +1,8 @@
-### 0.2.11 (COMING)
+### 0.2.11 (2022-9-2)
 
-- GoogleSheets.create_sheet() will now return the entire URL instead of the only the ID
+- BREAKING CHANGE: GoogleSheets.create_sheet() will now return the entire URL instead of the only the ID
+- GoogleSheets.\_\_get_id() now uses the re library to extract id
+- Updated GoogleSheets's tests to account for new return on create_sheet()
 - Updated dependencies
 
 ### 0.2.10 (2022-5-18)
