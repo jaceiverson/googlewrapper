@@ -150,9 +150,9 @@ from googlewrapper import GoogleSearchConsole
 gsc = GoogleSearchConsole()
 
 # assign variables to our GSC object
-gsc.set_sites(sites_list)
+gsc.set_sites(["sc-domain:example.com"])
 gsc.set_date(dt.date.today())
-gsc.set_dimensions(dim_list)
+gsc.set_dimensions(["page","date","query"])
 
 # call the api to get the data
 data = gsc.get_data()
@@ -167,8 +167,8 @@ gsc = GoogleSearchConsole()
 gsc.set_start_date(dt.date.today()-dt.timedelta(days=365))
 gsc.set_end_date(dt.date.today())
 gsc.set_dimensions(['query'])
-gsc.set_branded(branded_dict)
-gsc.set_sites(sites_list)
+gsc.set_branded({"sc-domain:example.com":["example","test"]})
+gsc.set_sites(["sc-domain:example.com"])
 
 data = gsc.get_data()
 ctr = gsc.ctr()
